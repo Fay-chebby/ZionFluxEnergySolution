@@ -90,10 +90,10 @@ export function Contact() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
                   <a
-                    href="mailto:info@zionflux.energy"
+                    href="mailto: zionfluxenergy@gmail.com"
                     className="text-orange-600 hover:text-orange-700"
                   >
-                    info@zionflux.energy
+                    zionfluxenergy@gmail.com
                   </a>
                 </div>
               </div>
@@ -105,10 +105,10 @@ export function Contact() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
                   <a
-                    href="tel:+254700000000"
+                    href="tel:+254768502999"
                     className="text-gray-600 hover:text-gray-900"
                   >
-                    +254 700 000 000
+                    +254 768 502 999
                   </a>
                 </div>
               </div>

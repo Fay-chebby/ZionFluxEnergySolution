@@ -6,8 +6,9 @@ import { Target, Leaf, Sparkles, Shield, Users } from "lucide-react";
 const values = [
   {
     icon: Target,
-    title: "Purpose",
-    description: "We are led by vision, not trend",
+    title: "Engineering Excellence",
+    description:
+      "Precision in design. Compliance in execution. Safety without compromise.",
     color: "from-blue-500 to-blue-600",
     bgColor: "bg-blue-50",
     borderColor: "border-blue-200",
@@ -15,7 +16,8 @@ const values = [
   {
     icon: Leaf,
     title: "Sustainability",
-    description: "Our solutions are designed to last, for people and planet",
+    description:
+      "Advancing clean energy while optimizing efficiency and reducing environmental impact.",
     color: "from-green-500 to-green-600",
     bgColor: "bg-green-50",
     borderColor: "border-green-200",
@@ -23,7 +25,8 @@ const values = [
   {
     icon: Sparkles,
     title: "Innovation",
-    description: "We embrace change and deliver cutting-edge technology",
+    description:
+      "Strategic adoption of evolving energy technologies including hybrid systems, storage solutions, and smart monitoring.",
     color: "from-purple-500 to-purple-600",
     bgColor: "bg-purple-50",
     borderColor: "border-purple-200",
@@ -31,15 +34,17 @@ const values = [
   {
     icon: Shield,
     title: "Integrity",
-    description: "We do what is right, not what is easy",
+    description:
+      "Transparent system sizing. Honest projections. Accountable execution.",
     color: "from-red-500 to-red-600",
     bgColor: "bg-red-50",
     borderColor: "border-red-200",
   },
   {
     icon: Users,
-    title: "Empowerment",
-    description: "We uplift communities with every system we build",
+    title: "Client Partnership",
+    description:
+      "Solutions driven by real needs, real load data, and long-term growth plans.",
     color: "from-amber-500 to-amber-600",
     bgColor: "bg-amber-50",
     borderColor: "border-amber-200",

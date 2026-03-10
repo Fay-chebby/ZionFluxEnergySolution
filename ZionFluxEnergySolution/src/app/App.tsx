@@ -13,9 +13,6 @@ import { SolarPVPage } from "./pages/services/SolarPVPage";
 export default function App() {
   return (
     <Router>
-      <div className="bg-blue-500 text-white p-4 rounded text-center">
-        Tailwind is working!
-      </div>
       <div className="min-h-screen bg-white">
         <Navigation />
         <main>

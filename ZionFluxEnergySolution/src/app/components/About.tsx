@@ -25,8 +25,8 @@ export function About() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-600 mx-auto mb-6" />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            ZionFlux Energy Solutions Ltd. is a purpose-driven renewable energy
-            company based in Kenya
+            ZionFlux Energy Solutions Ltd. is a professional renewable energy
+            and electrical engineering company based in Kenya
           </p>
         </motion.div>
 
@@ -76,7 +76,8 @@ export function About() {
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">Our Philosophy</h3>
                 <p className="text-gray-600">
-                  Energy is a human right, and clean energy is the future
+                  We believe that energy is a human right, and clean energy is
+                  the future.
                 </p>
               </div>
 
@@ -86,10 +87,11 @@ export function About() {
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">Our Name</h3>
                 <p className="text-gray-600">
-                  <span className="font-semibold">Zion</span>: Hope &
-                  restoration.
-                  <span className="font-semibold"> Flux</span>: Movement &
-                  adaptability
+                  <span className="font-semibold">Zion</span>: A symbol of hope,
+                  restoration, and higher purpose.
+                  <p></p>
+                  <span className="font-semibold"> Flux</span>: A state of
+                  movement; dynamic, forward-driven, and adaptable.
                 </p>
               </div>
             </div>
@@ -97,7 +99,7 @@ export function About() {
             <div className="bg-gradient-to-r from-amber-50 to-orange-50 p-6 rounded-xl border border-amber-200">
               <p className="text-lg font-semibold text-gray-900 italic">
                 "ZionFlux means hope in motion, the flow of light and power
-                toward a cleaner, fairer world."
+                toward a cleaner, more resilient, and equitable world."
               </p>
             </div>
           </motion.div>
@@ -115,8 +117,9 @@ export function About() {
               Our Vision
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              To be a trusted force in Africa's energy transition by making
-              renewable energy accessible, smart, and scalable for all.
+              To become a leading African integrator of intelligent renewable
+              and electrical energy systems advancing reliable, scalable, and
+              climate-aligned power infrastructure across the continent.
             </p>
           </motion.div>
 
@@ -132,19 +135,29 @@ export function About() {
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-start">
                 <span className="text-orange-500 mr-2">•</span>
-                Design sustainable energy solutions that power communities
+                To design and engineer high-performance solar and electrical
+                systems aligned with modern energy demands.
               </li>
               <li className="flex items-start">
                 <span className="text-orange-500 mr-2">•</span>
-                Champion clean technologies that improve livelihoods
+                To supply certified, high-quality equipment compliant with
+                international standards.
               </li>
               <li className="flex items-start">
                 <span className="text-orange-500 mr-2">•</span>
-                Invest in people and systems that localize energy resilience
+                To execute safe, efficient, and standards-compliant
+                installations.
               </li>
               <li className="flex items-start">
                 <span className="text-orange-500 mr-2">•</span>
-                Inspire trust through operational excellence
+                To provide lifecycle maintenance and system optimization for
+                long-term reliability.
+              </li>
+
+              <li className="flex items-start">
+                <span className="text-orange-500 mr-2">•</span>
+                To strengthen energy independence through decentralized and
+                hybrid power systems.
               </li>
             </ul>
           </motion.div>
