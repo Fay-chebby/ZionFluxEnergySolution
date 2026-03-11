@@ -9,6 +9,9 @@ import { Testimonials } from "../components/Testimonials";
 export function HomePage() {
   return (
     <>
+      <div style={{ padding: 40 }}>
+        <h1>✅ ZionFlux is working</h1>
+      </div>
       <Hero />
       <About />
       <Values />
