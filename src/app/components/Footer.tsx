@@ -156,15 +156,15 @@ export function Footer() {
               reserved.
             </p>
             <div className="flex gap-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-amber-500 transition-colors">
+              <a className="hover:text-amber-500 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-amber-500 transition-colors">
+              <a className="hover:text-amber-500 transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="hover:text-amber-500 transition-colors">
+              {/* <a className="hover:text-amber-500 transition-colors">
                 Cookie Policy
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

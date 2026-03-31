@@ -89,7 +89,7 @@ export function SolarPVPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/pricing"
-                className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all flex items-center justify-center gap-2"
+                className="px-8 py-4 bg-gradient-to-r from-[#056d4c] to-[#044f38] text-white rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all flex items-center justify-center gap-2"
               >
                 <Calculator size={20} />
                 Calculate Savings

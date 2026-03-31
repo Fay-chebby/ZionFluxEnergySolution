@@ -1,13 +1,18 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
+import minigrid from "../../assets/minigrid.png";
+import battery from "../../assets/The Best Wall-Mounted Battery Solution for Modern Energy Needs_ Why RICHYE Stands Out - RICHYE.jpg";
+import solar from "../../assets/MachineQ Launches IoT Power Monitoring Solution to Revolutionize Energy Management.jpg";
+import training from "../../assets/training.jpg";
 import {
   Sun,
   Battery,
   Zap,
   BarChart3,
   FileCheck,
-  Lightbulb,
+  ArrowRight,
 } from "lucide-react";
 
 const solutions = [
@@ -18,45 +23,43 @@ const solutions = [
       "Comprehensive solar panel installations for homes, institutions, and industrial use",
     image:
       "https://images.unsplash.com/photo-1720610784599-18c02b1cc9ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2xhciUyMGluc3RhbGxhdGlvbiUyMHRlY2huaWNpYW58ZW58MXx8fHwxNzcxODQzMTEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    link: "/services/solar",
   },
   {
     icon: Zap,
     title: "Mini-Grids & Hybrid Systems",
     description:
       "Empowering rural, off-grid areas with reliable and sustainable power solutions",
-    image:
-      "https://images.unsplash.com/photo-1675130277336-23cb686f01c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aW5kJTIwdHVyYmluZSUyMHN1c3RhaW5hYmxlJTIwZW5lcmd5fGVufDF8fHx8MTc3MTg1ODUzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+    image: minigrid,
+
+    link: "/services/mini-grids",
   },
   {
     icon: Battery,
     title: "Battery Storage Solutions",
     description:
       "Advanced energy storage for reliability, autonomy, and optimal performance",
-    image:
-      "https://images.unsplash.com/photo-1670322196746-e8c6ea72ab90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYXR0ZXJ5JTIwZW5lcmd5JTIwc3RvcmFnZSUyMHN5c3RlbXxlbnwxfHx8fDE3NzE4MjA3NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: battery,
+
+    link: "/services/battery",
   },
   {
     icon: BarChart3,
     title: "Smart Energy Monitoring",
     description:
       "Real-time monitoring and automation for maximum efficiency and control",
-    image:
-      "https://images.unsplash.com/photo-1741012254499-fd90b2015605?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwdmlsbGFnZSUyMGVsZWN0cmljaXR5JTIwbGlnaHRzfGVufDF8fHx8MTc3MTg1ODUzNXww&ixlib=rb-4.1.0&q=80&w=1080",
+    image: solar,
+
+    link: "/services/monitoring",
   },
   {
     icon: FileCheck,
     title: "Energy Audit Services",
     description:
       "Professional training and advisory services for optimal energy management",
-    image:
-      "https://images.unsplash.com/photo-1572182556191-7035e81ef95c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2xhciUyMHBhbmVscyUyMGFmcmljYSUyMHN1bnNldHxlbnwxfHx8fDE3NzE4NTg1MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-  },
-  {
-    icon: Lightbulb,
-    title: "Community Electrification",
-    description: "Impact projects that bring power to underserved communities",
-    image:
-      "https://images.unsplash.com/photo-1766853107796-9d79ce6bb5fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZW5ld2FibGUlMjBlbmVyZ3klMjBjb21tdW5pdHl8ZW58MXx8fHwxNzcxODQxNjM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: training,
+
+    link: "/services/audits",
   },
 ];
 
@@ -118,51 +121,39 @@ export function Solutions() {
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {solution.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed mb-4">
                     {solution.description}
                   </p>
-                  <button className="mt-4 text-orange-600 font-semibold hover:text-orange-700 transition-colors flex items-center gap-2 group/btn">
+                  <Link
+                    to={solution.link}
+                    className="text-orange-600 font-semibold hover:text-orange-700 transition-colors flex items-center gap-2 group/btn"
+                  >
                     Learn more
-                    <span className="group-hover/btn:translate-x-1 transition-transform">
-                      →
-                    </span>
-                  </button>
+                    <ArrowRight
+                      className="group-hover/btn:translate-x-1 transition-transform"
+                      size={16}
+                    />
+                  </Link>
                 </div>
               </motion.div>
             );
           })}
         </div>
 
-        {/* Who We Serve Section */}
+        {/* View All Services CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-20 bg-gradient-to-br from-amber-500 to-orange-600 rounded-3xl p-12 text-white"
+          className="mt-12 text-center"
         >
-          <h3 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-            Who We Serve
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              "Urban & Rural Households",
-              "Commercial & Industrial Enterprises",
-              "Government & Health Centers",
-              "NGOs & Faith-Based Organizations",
-              "Agribusinesses & Water Projects",
-              "Development Partners & Investors",
-            ].map((client, index) => (
-              <motion.div
-                key={client}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all"
-              >
-                <p className="text-center font-medium">{client}</p>
-              </motion.div>
-            ))}
-          </div>
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#056d4c] to-[#044f38] text-white rounded-full font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all"
+          >
+            View All Services
+            <ArrowRight size={20} />
+          </Link>
         </motion.div>
       </div>
     </section>

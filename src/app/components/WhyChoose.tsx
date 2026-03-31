@@ -1,33 +1,54 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
-import { CheckCircle, Globe, TrendingUp, Shield, Heart } from "lucide-react";
+import {
+  FileCheck,
+  Wrench,
+  Shield,
+  TrendingUp,
+  Heart,
+  Globe,
+  Users,
+} from "lucide-react";
 
 const reasons = [
   {
-    icon: CheckCircle,
-    title: "Technically Sound",
-    description: "Locally led and globally competent with deep expertise",
+    icon: FileCheck,
+    title: "Full-Cycle Delivery",
+    description:
+      "From design to commissioning — we handle every step of your energy solution",
   },
   {
-    icon: Globe,
-    title: "Africa-Focused",
-    description: "Deep understanding of Africa's unique energy challenges",
-  },
-  {
-    icon: TrendingUp,
-    title: "Scalable Systems",
-    description: "Flexible, scalable solutions built for long-term success",
+    icon: Wrench,
+    title: "Engineering-Driven",
+    description:
+      "Precise system sizing and comprehensive technical documentation",
   },
   {
     icon: Shield,
-    title: "Transparent Processes",
-    description: "Value-driven partnerships with complete transparency",
+    title: "Standards-Compliant",
+    description:
+      "All installations meet international quality and safety standards",
+  },
+  {
+    icon: TrendingUp,
+    title: "Transparent Pricing",
+    description: "Clear costs with measurable performance and verified results",
   },
   {
     icon: Heart,
-    title: "Mission-Driven",
-    description: "A business rooted in mission, not just metrics",
+    title: "Integrity-Centered",
+    description: "We deliver what we promise — no shortcuts, no compromises",
+  },
+  {
+    icon: Globe,
+    title: "Built for Africa",
+    description: "Systems designed for African climatic and grid conditions",
+  },
+  {
+    icon: Users,
+    title: "Multidisciplinary Team",
+    description: "Technical collaboration across engineering disciplines",
   },
 ];
 
@@ -46,12 +67,12 @@ export function WhyChoose() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Why Choose ZionFlux?
+            WHY ZIONFLUX?
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-600 mx-auto mb-6" />
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We're not just another energy company. We're your partner in
-            Africa's energy transformation.
+            Engineering excellence, integrity-driven operations, and systems
+            built for Africa
           </p>
         </motion.div>
 
@@ -93,7 +114,7 @@ export function WhyChoose() {
               <p className="text-white/90 mb-6">
                 Join the renewable energy revolution today
               </p>
-              <button className="px-8 py-3 bg-white text-orange-600 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+              <button className="px-8 py-3 bg-gradient-to-r from-[#056d4c] to-[#038153] text-white rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all">
                 Contact Us
               </button>
             </div>
@@ -112,9 +133,9 @@ export function WhyChoose() {
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { value: "1,000+", label: "Systems Installed" },
-              { value: "50+", label: "Communities Powered" },
-              { value: "10,000+", label: "Tons CO₂ Reduced" },
+              { value: "10+", label: "Systems Installed" },
+              { value: "5+", label: "Communities Powered" },
+              { value: "1000+", label: "Tons CO₂ Reduced" },
               { value: "100%", label: "Customer Satisfaction" },
             ].map((stat, index) => (
               <motion.div

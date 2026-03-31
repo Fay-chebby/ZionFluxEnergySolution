@@ -5,7 +5,7 @@ import { Check, Calculator, TrendingUp, DollarSign, Zap } from "lucide-react";
 const packages = [
   {
     name: "Residential Basic",
-    price: "₤150,000",
+    price: "$1,500",
     capacity: "3-5 kW",
     description: "Perfect for small homes and apartments",
     features: [
@@ -21,7 +21,7 @@ const packages = [
   },
   {
     name: "Residential Premium",
-    price: "₤450,000",
+    price: "$4,500",
     capacity: "8-12 kW",
     description: "Ideal for larger homes with high energy needs",
     features: [
@@ -56,17 +56,18 @@ const packages = [
 ];
 
 export function PricingPage() {
-  const [monthlyBill, setMonthlyBill] = useState(15000);
-  const [systemSize, setSystemSize] = useState(5);
-  const [electricityRate, setElectricityRate] = useState(25);
+  // Dollar-based state
+  const [monthlyBill, setMonthlyBill] = useState(150); // $150
+  const [systemSize, setSystemSize] = useState(5); // kW
+  const [electricityRate, setElectricityRate] = useState(0.25); // $0.25 per kWh
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   // ROI Calculations
-  const systemCost = systemSize * 200000; // ₤200,000 per kW
-  const annualProduction = systemSize * 1400; // kWh per year (average in Kenya)
-  const annualSavings = annualProduction * electricityRate;
+  const systemCost = systemSize * 2000; // $2,000 per kW
+  const annualProduction = systemSize * 1400; // kWh per year
+  const annualSavings = annualProduction * electricityRate; // $ per year
   const paybackPeriod = (systemCost / annualSavings).toFixed(1);
   const twentyYearSavings = (annualSavings * 20 - systemCost).toLocaleString();
   const roi = (((annualSavings * 20) / systemCost - 1) * 100).toFixed(0);
@@ -74,7 +75,7 @@ export function PricingPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-20 pt-32">
+      <section className="bg-gradient-to-r from-amber-100 to-orange-200 text-gray-900 py-20 pt-32">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -84,7 +85,7 @@ export function PricingPage() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Transparent Pricing
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-700 mb-8">
               Affordable solar solutions with flexible financing options.
               Calculate your savings and ROI below.
             </p>
@@ -121,19 +122,19 @@ export function PricingPage() {
                 <div className="space-y-8">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-3">
-                      Current Monthly Electricity Bill (₤)
+                      Current Monthly Electricity Bill ($)
                     </label>
                     <input
                       type="range"
-                      min="5000"
-                      max="50000"
-                      step="1000"
+                      min="50"
+                      max="500"
+                      step="10"
                       value={monthlyBill}
                       onChange={(e) => setMonthlyBill(Number(e.target.value))}
                       className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-amber-500"
                     />
                     <div className="mt-2 text-3xl font-bold text-amber-600">
-                      ₤{monthlyBill.toLocaleString()}
+                      ${monthlyBill.toLocaleString()}
                     </div>
                   </div>
 
@@ -157,13 +158,13 @@ export function PricingPage() {
 
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-3">
-                      Electricity Rate (₤/kWh)
+                      Electricity Rate ($/kWh)
                     </label>
                     <input
                       type="range"
-                      min="15"
-                      max="40"
-                      step="1"
+                      min="0.1"
+                      max="0.5"
+                      step="0.01"
                       value={electricityRate}
                       onChange={(e) =>
                         setElectricityRate(Number(e.target.value))
@@ -171,7 +172,7 @@ export function PricingPage() {
                       className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-amber-500"
                     />
                     <div className="mt-2 text-3xl font-bold text-amber-600">
-                      ₤{electricityRate}
+                      ${electricityRate.toFixed(2)}
                     </div>
                   </div>
                 </div>
@@ -186,7 +187,7 @@ export function PricingPage() {
                       </h3>
                     </div>
                     <p className="text-3xl font-bold text-gray-900">
-                      ₤{systemCost.toLocaleString()}
+                      ${systemCost.toLocaleString()}
                     </p>
                   </div>
 
@@ -198,7 +199,7 @@ export function PricingPage() {
                       </h3>
                     </div>
                     <p className="text-3xl font-bold text-gray-900">
-                      ₤{annualSavings.toLocaleString()}
+                      ${annualSavings.toLocaleString()}
                     </p>
                   </div>
 
@@ -219,7 +220,7 @@ export function PricingPage() {
                       20-Year Savings
                     </h3>
                     <p className="text-3xl font-bold text-gray-900 mb-2">
-                      ₤{twentyYearSavings}
+                      ${twentyYearSavings}
                     </p>
                     <p className="text-sm text-gray-600">
                       ROI:{" "}
@@ -231,14 +232,14 @@ export function PricingPage() {
 
               <div className="mt-8 bg-amber-50 border border-amber-200 rounded-lg p-4">
                 <p className="text-sm text-gray-700">
-                  <strong>Note:</strong> Calculations are estimates based on
-                  average conditions. Actual savings may vary based on location,
-                  consumption patterns, and system efficiency.
+                  <strong>Note:</strong> Calculations are estimates. Actual
+                  savings may vary based on location, consumption, and system
+                  efficiency.
                 </p>
               </div>
 
               <div className="mt-8 text-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all">
+                <button className="px-8 py-4 bg-gradient-to-r from-[#056d4c] to-[#044f38] text-white rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all">
                   Get Custom Quote
                 </button>
               </div>
@@ -308,9 +309,7 @@ export function PricingPage() {
                     <li key={feature} className="flex items-start gap-3">
                       <Check
                         size={20}
-                        className={`flex-shrink-0 mt-0.5 ${
-                          pkg.popular ? "text-white" : "text-green-500"
-                        }`}
+                        className={`flex-shrink-0 mt-0.5 ${pkg.popular ? "text-white" : "text-green-500"}`}
                       />
                       <span
                         className={`text-sm ${pkg.popular ? "text-white" : "text-gray-700"}`}
@@ -333,44 +332,6 @@ export function PricingPage() {
               </motion.div>
             ))}
           </div>
-
-          {/* Financing Options */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-16 bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-12 text-white text-center"
-          >
-            <h3 className="text-3xl font-bold mb-4">
-              Flexible Financing Available
-            </h3>
-            <p className="text-xl text-gray-300 mb-8">
-              Don't let upfront costs hold you back. We partner with leading
-              financial institutions to offer payment plans that fit your
-              budget.
-            </p>
-            <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <p className="text-3xl font-bold text-amber-400 mb-2">0%</p>
-                <p className="text-sm">Interest for 12 months</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <p className="text-3xl font-bold text-amber-400 mb-2">
-                  Up to 10
-                </p>
-                <p className="text-sm">Years to pay</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <p className="text-3xl font-bold text-amber-400 mb-2">
-                  From 10%
-                </p>
-                <p className="text-sm">Down payment</p>
-              </div>
-            </div>
-            <button className="mt-8 px-8 py-3 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-100 transition-all">
-              Learn About Financing
-            </button>
-          </motion.div>
         </div>
       </section>
     </div>

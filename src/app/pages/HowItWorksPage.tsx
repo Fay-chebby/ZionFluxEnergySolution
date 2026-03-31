@@ -126,17 +126,17 @@ export function HowItWorksPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-20 pt-32">
+      <section className="bg-gradient-to-r from-amber-100 to-orange-200  text-white py-20 pt-32">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-black">
               How It Works
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-black mb-8">
               From initial consultation to final installation, we make the
               journey to solar simple and stress-free
             </p>
@@ -286,7 +286,7 @@ export function HowItWorksPage() {
               toward energy independence
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all flex items-center justify-center gap-2">
+              <button className="px-8 py-4 bg-gradient-to-r from-[#056d4c] to-[#044f38] text-white rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all flex items-center justify-center gap-2">
                 Schedule Consultation
                 <ArrowRight size={20} />
               </button>

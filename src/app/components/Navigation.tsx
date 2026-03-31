@@ -50,7 +50,11 @@ export function Navigation() {
                 ZionFlux Energy
               </h1>
               <p
-                className={`text-xs ${isScrolled || location.pathname !== "/" ? "text-gray-600" : "text-white/90"}`}
+                className={`text-xs ${
+                  isScrolled || location.pathname !== "/"
+                    ? "text-gray-500"
+                    : "text-white"
+                }`}
               >
                 Light for Today, Power for Generations
               </p>
@@ -61,7 +65,7 @@ export function Navigation() {
           <nav className="hidden lg:flex items-center space-x-6">
             <Link
               to="/"
-              className={`text-sm font-medium transition-colors hover:text-amber-600 ${
+              className={`text-sm font-medium transition-colors hover:text-[#056d4c] ${
                 isScrolled || location.pathname !== "/"
                   ? "text-gray-700"
                   : "text-white"
@@ -72,7 +76,7 @@ export function Navigation() {
 
             <Link
               to="/about"
-              className={`text-sm font-medium transition-colors hover:text-amber-600 ${
+              className={`text-sm font-medium transition-colors hover:text-[#056d4c]${
                 isScrolled || location.pathname !== "/"
                   ? "text-gray-700"
                   : "text-white"
@@ -88,7 +92,7 @@ export function Navigation() {
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <button
-                className={`text-sm font-medium transition-colors hover:text-amber-600 flex items-center gap-1 ${
+                className={`text-sm font-medium transition-colors hover:text-[#056d4c] flex items-center gap-1 ${
                   isScrolled || location.pathname !== "/"
                     ? "text-gray-700"
                     : "text-white"
@@ -108,7 +112,7 @@ export function Navigation() {
                       <Link
                         key={service.path}
                         to={service.path}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-amber-50  hover:text-[#056d4c]transition-colors"
                       >
                         {service.name}
                       </Link>
@@ -120,7 +124,7 @@ export function Navigation() {
 
             <Link
               to="/projects"
-              className={`text-sm font-medium transition-colors hover:text-amber-600 ${
+              className={`text-sm font-medium transition-colors hover:text-[#056d4c] ${
                 isScrolled || location.pathname !== "/"
                   ? "text-gray-700"
                   : "text-white"
@@ -131,7 +135,7 @@ export function Navigation() {
 
             <Link
               to="/how-it-works"
-              className={`text-sm font-medium transition-colors hover:text-amber-600 ${
+              className={`text-sm font-medium transition-colors hover:text-[#056d4c] ${
                 isScrolled || location.pathname !== "/"
                   ? "text-gray-700"
                   : "text-white"
@@ -142,7 +146,7 @@ export function Navigation() {
 
             <Link
               to="/pricing"
-              className={`text-sm font-medium transition-colors hover:text-amber-600 ${
+              className={`text-sm font-medium transition-colors hover:text-[#056d4c] ${
                 isScrolled || location.pathname !== "/"
                   ? "text-gray-700"
                   : "text-white"
@@ -151,20 +155,20 @@ export function Navigation() {
               Pricing
             </Link>
 
-            <Link
+            {/* <Link
               to="/blog"
-              className={`text-sm font-medium transition-colors hover:text-amber-600 ${
+              className={`text-sm font-medium transition-colors hover:text-[#056d4c] ${
                 isScrolled || location.pathname !== "/"
                   ? "text-gray-700"
                   : "text-white"
               }`}
             >
               Blog
-            </Link>
+            </Link> */}
 
             <Link
               to="/contact"
-              className="px-6 py-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-medium hover:shadow-lg transform hover:scale-105 transition-all"
+              className="px-6 py-2 bg-gradient-to-r from-[#056d4c] to-[#044f38] text-white rounded-full font-medium hover:shadow-lg transform hover:scale-105 transition-all"
             >
               Get Started
             </Link>
