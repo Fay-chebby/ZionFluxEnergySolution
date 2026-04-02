@@ -73,13 +73,10 @@ export function Navigation() {
             >
               Home
             </Link>
-
             <Link
               to="/about"
-              className={`text-sm font-medium transition-colors hover:text-[#056d4c]${
-                isScrolled || location.pathname !== "/"
-                  ? "text-gray-700"
-                  : "text-white"
+              className={`text-sm font-medium transition-colors hover:text-[#056d4c] ${
+                isScrolled ? "text-gray-700" : "text-white"
               }`}
             >
               About

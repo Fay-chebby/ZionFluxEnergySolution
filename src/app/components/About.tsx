@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
 import { Lightbulb, Zap } from "lucide-react";
+import solar2 from "../../assets/solar.jpg";
 
 export function About() {
   const ref = useRef(null);
@@ -40,7 +41,7 @@ export function About() {
           >
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="src\assets\solar.jpg"
+                src={solar2}
                 alt="Community powered by renewable energy"
                 className="w-full h-[600px] object-cover"
               />

@@ -87,7 +87,7 @@ export function Hero() {
           {[
             { value: "100%", label: "Renewable" },
             { value: "24/7", label: "Support" },
-            { value: "10+", label: "Installations" },
+            { value: "10+", label: "Communities Empowered" },
             { value: "Pan-African", label: "Reach" },
           ].map((stat, index) => (
             <motion.div
