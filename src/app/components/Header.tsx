@@ -37,24 +37,33 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* ================= LOGO ================= */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
+            {/* ✅ Smaller logo on mobile */}
+            <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg md:text-xl">Z</span>
             </div>
+
             <div>
+              {/* ✅ Responsive title */}
               <h1
-                className={`font-bold text-lg ${isScrolled ? "text-gray-900" : "text-white"}`}
+                className={`font-bold text-base md:text-lg ${
+                  isScrolled ? "text-gray-900" : "text-white"
+                }`}
               >
                 ZionFlux Energy
               </h1>
+
+              {/* ✅ Smaller subtitle on mobile */}
               <p
-                className={`text-xs ${isScrolled ? "text-gray-600" : "text-white/90"}`}
+                className={`text-[10px] md:text-xs ${
+                  isScrolled ? "text-gray-600" : "text-white/90"
+                }`}
               >
                 Light for Today, Power for Generations
               </p>

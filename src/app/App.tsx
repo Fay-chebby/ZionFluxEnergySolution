@@ -6,7 +6,7 @@ import { AboutPage } from "./pages/AboutPage";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { HowItWorksPage } from "./pages/HowItWorksPage";
 import { PricingPage } from "./pages/PricingPage";
-// import { BlogPage } from "./pages/BlogPage";
+import { BlogPage } from "./pages/BlogPage";
 import { ContactPage } from "./pages/ContactPage";
 import { SolarPVPage } from "./pages/services/SolarPVPage";
 import { MiniGridsPage } from "./pages/services/MiniGridsPage";
@@ -30,7 +30,7 @@ export default function App() {
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/how-it-works" element={<HowItWorksPage />} />
             <Route path="/pricing" element={<PricingPage />} />
-            {/* <Route path="/blog" element={<BlogPage />} /> */}
+            <Route path="/blog" element={<BlogPage />} />
             <Route path="/contact" element={<ContactPage />} />
 
             <Route path="/services/solar" element={<SolarPVPage />} />

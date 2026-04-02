@@ -248,12 +248,12 @@ export function Navigation() {
               >
                 Pricing
               </Link>
-              <Link
+              {/* <Link
                 to="/blog"
                 className="text-gray-700 font-medium hover:text-amber-600 transition-colors"
               >
                 Blog
-              </Link>
+              </Link> */}
               <Link
                 to="/contact"
                 className="px-6 py-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-medium text-center"
