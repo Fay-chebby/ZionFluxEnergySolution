@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Linkedin, Instagram, Mail } from "lucide-react";
+import { Facebook, Linkedin, Instagram, Mail } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -30,20 +30,20 @@ export function Footer() {
               >
                 <Facebook size={18} />
               </a>
-              <a
-                href="#"
+              {/* <a
+                href="https://www.instagram.com/zionfluxenergysolutions"
                 className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition-colors"
               >
-                <Twitter size={18} />
-              </a>
+                <TikTok size={18} />
+              </a> */}
               <a
-                href="#"
+                href="https://www.linkedin.com/company/zionflux-energy-solutions"
                 className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition-colors"
               >
                 <Linkedin size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/zionfluxenergysolutions"
                 className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition-colors"
               >
                 <Instagram size={18} />
